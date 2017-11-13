@@ -1,0 +1,32 @@
+version: '2'
+services:
+  manager:
+    build: .
+    command: npm run main
+    restart: always
+    volumes:
+      - .:/app
+  api_1:
+    build: .
+    command: npm run api
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - '8081:8080'
+  api_2:
+    build: .
+    command: npm run api
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - '8082:8080'
+  api_3:
+    build: .
+    command: npm run api
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - '8083:8080'
