@@ -1,5 +1,5 @@
 class Calculator
-	def eval(expression)
+	def self.eval(expression = '')
 		total = 0
 		expression = expression.split(',')
 		operands = []
@@ -15,10 +15,6 @@ class Calculator
 			end
 		end
 
-		puts "Result: #{total}"
+		total
 	end
 end
-
-calculator = Calculator.new
-
-calculator.eval('3,4,+,5,10,+')
