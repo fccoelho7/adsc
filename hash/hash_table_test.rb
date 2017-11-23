@@ -18,6 +18,20 @@ class TestHashTable < Test::Unit::TestCase
     assert_equal(hash.store[0].value, 'Carvalho')
     assert_equal(hash.store[0].next.value, 'Xunda')
   end
+
+  def test_set_and_resize
+    hash = HashTable.new(2)
+
+    assert_equal(hash.store_size, 2)
+
+    hash.set('nome', 'Fabio')
+    hash.set('sobrenome', 'Carvalho')
+    hash.set('idade', '23')
+    hash.set('origem', 'Brazil')
+    hash.set('estado', 'Florianópolis')
+
+    assert_equal(hash.store_size, 8)
+  end
  
   def test_get
     hash = HashTable.new(1)
