@@ -1,1 +1,0 @@
-{"email1@test.com":300,"email2@test.com":300,"email3@test.com":300}
